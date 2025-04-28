@@ -10,7 +10,7 @@ function Navbar() {
         <a href="#top">
             <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt="" />
         </a>
-        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
+        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-serif'>
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#service">Services</a></li>
