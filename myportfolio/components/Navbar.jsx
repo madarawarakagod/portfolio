@@ -1,15 +1,16 @@
-import React from 'react'
+import {assets} from '@/assets/assets'
 import Image from 'next/image'
-import {asset} from '@/assets/assets'
+import React from 'react'
+
 
 function Navbar() {
   return (
     <>
     <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
-        <a href="">
-            <Image src={assets.logo} className='w-28 cursor-pointer mr-14' alt="" />
+        <a href="#top">
+            <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt="" />
         </a>
-        <ul>
+        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#service">Services</a></li>
@@ -17,7 +18,7 @@ function Navbar() {
             <li><a href="#contact">Contact me</a></li>
         </ul>
         <div>
-            <a href="#contact">Contact<Image src={assets.logo} alt="" className='w-3'/> </a>
+            <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4'>Contact<Image src={assets.arrow_icon} alt="" className='w-3'/> </a>
         </div>
     </nav>
     </>
