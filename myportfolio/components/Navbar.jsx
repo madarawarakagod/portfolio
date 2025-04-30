@@ -36,7 +36,7 @@ function Navbar() {
         </ul>
         <div className='flex items-center gap-4'>
           <button>
-            <Image src={assets.moon_icon}alt=' ' className='w-6'/>
+            <Image src={assets.moon_icon} alt=' ' className='w-6'/>
           </button>
 
                    <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4'>
@@ -50,9 +50,9 @@ function Navbar() {
         </div>
 
         {/*mobile menu*/}
-        <ul className='flex md:hidden flex-col gap-4 py-20
+        <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20
          px-10 fixed -right-62 top-0 bottom-0 w-64 z-50 h-screen
-          bg-rose-50 transsition duration-500'>
+          bg-rose-50 transition duration-500'>
 
    <div className='absolute right-6 top-6' onClick={closeMenu}> 
     
