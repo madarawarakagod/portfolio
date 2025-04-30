@@ -20,10 +20,10 @@ function Navbar() {
 
     
  
-      <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
+      <div className='fixed top-0    right-0 w-11/12 -z-10 translate-y-[-80%]'>
       <Image src={assets.header_bg_color} alt='' className='w-full'/>
     </div>
-    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
+    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-0 flex items-center justify-between z-50'>
         <a href="#top">
             <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt="" />
         </a>
