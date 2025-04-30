@@ -1,11 +1,24 @@
-import {assets} from '@/assets/assets'
+
 import Image from 'next/image'
-import React from 'react'
+import React,{useRef} from 'react'
+import { assets } from './../assets/assets';
+
 
 
 function Navbar() {
+  const sideMenuRef = useRef();
+    
+    const openMenu =()=>{
+        sideMenuRef.current.style.transform='translateX(-16rem)'
+    }
+    const closeMenu=()=>{
+      sideMenuRef.current.style.transform='translate(16rem)'
+    }
+
   return (
     <>
+
+    
  
       <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
       <Image src={assets.header_bg_color} alt='' className='w-full'/>
@@ -38,15 +51,18 @@ function Navbar() {
 
         {/*mobile menu*/}
         <ul className='flex md:hidden flex-col gap-4 py-20
-         px-10 fixed-right-0 top-0 bottom-0 w-64 z-50 h-screen
+         px-10 fixed -right-62 top-0 bottom-0 w-64 z-50 h-screen
           bg-rose-50 transsition duration-500'>
-   
-        
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#work">My Work</a></li>
-            <li><a href="#contact">Contact me</a></li>
+
+   <div className='absolute right-6 top-6' onClick={closeMenu}> 
+    
+      <Image src={assets.close_black} alt='' className='w-5 cursor-pointer'/>
+   </div>
+            <li><a onClick={closeMenu} href="#top">Home</a></li>
+            <li><a onClick={closeMenu} href="#about">About me</a></li>
+            <li><a onClick={closeMenu} href="#service">Services</a></li>
+            <li><a onClick={closeMenu} href="#work">My Work</a></li>
+            <li><a onClick={closeMenu} href="#contact">Contact me</a></li>
         </ul>
     </nav>
     </>
