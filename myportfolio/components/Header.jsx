@@ -11,7 +11,7 @@ const Header = () => {
  </div>
  <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
     Hi I'm Madara Warakagoda <Image src={assets.hand_icon} alt='' className='w-6'/></h3>
-    <h1 className='text-3xl sm:text-6xl lg:text-[50px] font-Ovo'>
+    <h1 className='text-3xl sm:text-6xl lg:text-[65px] font-Ovo'>
         Full-Stack Developer based in Sri Lanka
     </h1>
          
