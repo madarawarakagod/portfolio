@@ -43,7 +43,7 @@ setIsScroll(false)
         ${isScroll ? "" :  " bg-white shadow-sm bg-opacity-50 font-serif"}`}>
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
-            <li><a href="#service">Services</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#work">My Work</a></li>
             <li><a href="#contact">Contact me</a></li>
         </ul>

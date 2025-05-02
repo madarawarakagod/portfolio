@@ -15,18 +15,15 @@ const Services = () => {
                     <div key={index}
                     className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-red-300 hover:-translate-1 duration-500'>
                        <Image src={icon} alt='' className='w-10'/> 
-<h3 className='text-1g my-4 text-gray-700'>{title}</h3> 
-<p className='text-sm text-gray-600 leading-5'> 
-{description} 
-</p> 
+                       <h3 className='text-1g my-4 text-gray-700'>{title}</h3> 
+                      <p className='text-sm text-gray-600 leading-5'> {description} </p> 
 I 
-<a href={link} className='flex items-center gap-2 text-sm mt-5'> 
-Read more <Image alt='' src={assets.right_arrow} className='w-4'/> 
-</a> 
+               <a href={link} className='flex items-center gap-2 text-sm mt-5'> 
+                    Read more <Image alt='' src={assets.right_arrow} className='w-4'/> </a> 
 </div>
-                ))}
-            </div>
-    </div>
+  ))}
+  </div>
+</div>
   )
 }
 
