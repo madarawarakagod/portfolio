@@ -21,7 +21,7 @@ function Navbar({isDarkMode,setIsDarkMode}) {
         if(scrollY>50){
            setIsScroll(true)
         }else{
-setIsScroll(false)
+       setIsScroll(false)
         }
       })
     },[])
@@ -31,16 +31,18 @@ setIsScroll(false)
 
     
  
-      <div className='fixed top-0  right-0 w-11/12 -z-10 translate-y-[-80%]'>
+      <div className='fixed top-0  right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
       <Image src={assets.header_bg_color} alt='' className='w-full'/>
     </div>
+  
     <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-5 flex items-center justify-between z-50
-    ${isScroll?"bg-white bg-opacity-50 backdrop-blur-lg shodow-sm": ""}`}>
+    ${isScroll ? "  bg-white     bg-opacity-50 backdrop-blur-lg shodow-sm dark:bgdarkTheme dark:shadow-white/20" : ""}`}>
         <a href="#top">
-            <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt="" />
+            <Image src={isDarkMode ? assets.logo_dark : assets.logo} className='w-28 cursor-pointer mr-14' alt="" />
         </a>
+
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
-        ${isScroll ? "" :  " bg-white shadow-sm bg-opacity-50 font-serif"}`}>
+        ${isScroll ? "" :  "     bg-white shadow-sm bg-opacity-50 font-serif dark:border dark:border-white/50 dark:bg-transparent"}`}>
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#services">Services</a></li>
@@ -49,18 +51,23 @@ setIsScroll(false)
         </ul>
         <div className='flex items-center gap-4'>
           
-          <button onClick={()=>setIsDarkMode (prev => !prev)}>
-            <Image src={assets.moon_icon} alt=' ' className='w-6'/>
+          <button onClick={()=>setIsDarkMode(prev => !prev)}>
+            <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6'/>
           </button>
-
-                   <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4'>
-                    Contact<Image src={assets.arrow_icon} alt="" className='w-3'/> </a>
+        
+                   
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                       <Image src={assets.menu_black} alt='' className='w-6'/>
-
                     </button>
 
+                    <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border
+                    border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50 '>
+                      Contact <Image src={isDarkMode? assets.arrow_icon_dark : assets.arrow_icon} alt='' className='w-3'/></a>
+
+                     <button className='block md:hidden ml-3' onClick={openMenu}>
+                      <Image src={isDarkMode ? assets.menu-white : assets.menu_black} alt='' className='w-6'/>
+                     </button>
         </div>
 
         {/*mobile menu*/}
